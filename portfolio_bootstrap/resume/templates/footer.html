@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{%load static %}
+{% block blockcontent %}
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <h3>{{personal_info.first_name}} {{personal_info.last_name}}</h3>
+
+        <div class="social-links">
+            {%for social_link in social_links%}
+            <a href="{{social_link.link}}" target="blank" class={{soical_link.link_name}}><i
+                    class="{{social_link.icon_name}}"></i></a>
+            {%endfor%}
+
+        </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>{{personal_info.first_name}}</span></strong>
+        </div>
+
+    </div>
+</footer>
+<!-- End Footer -->
+{%endblock%}
