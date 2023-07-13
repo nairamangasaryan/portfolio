@@ -70,7 +70,7 @@ class Education(models.Model):
 
 class Experience(models.Model):
     job_title = models.TextField(max_length=50)
-    company_name = models.TextField(max_length=50)
+    company_name = models.TextField(max_length=150)
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
     is_current = models.BooleanField()

@@ -43,7 +43,8 @@
                 {% for experience in experiences %}
                 <div class="resume-item">
                     <h4>{{experience.job_title}}</h4>
-                    <h5>{{experience.start_date}}-{{experience.end_date}}</h5>
+                    <h5>{{experience.start_date}}-{%if experience.is_current%} present {%else%}
+                        {{experience.end_date}}{% endif %}</h5>
                     <p><em>{{experience.company_name}}</em></p>
                     <h6>{{experience.job_description}}</h6>
                 </div>
