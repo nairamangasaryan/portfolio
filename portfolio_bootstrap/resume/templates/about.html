@@ -44,10 +44,12 @@
 
                                 </li>
                                 <li><i class="bi bi-chevron-right"></i>
-                                    <strong>Email:</strong><span>{{personal_info.email}}</span>
+                                    <strong>Email:</strong><span><b><em><a
+                                                    href="mailto:{{personal_info.email}}">{{personal_info.email}}</em></b></a></span>
                                 </li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong>
-                                    <span>{{personal_info.github}}</span>
+                                <li><i class=" bi bi-chevron-right"></i> <strong>www:</strong>
+                                    <span><b><em><a href="{{personal_info.www}}">
+                                                    {{personal_info.www}} </em></b></a></span>
                                 </li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
                                     <span>{{personal_info.phone}}</span>
@@ -74,8 +76,8 @@
                         <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
                             <div class="count-box">
                                 <i class="bi bi-journal-richtextr" style="color: #8a1ac2;"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1"
-                                    class="purecounter">{{facts.projects_count}}</span>
+                                <span data-purecounter-start="0" data-purecounter-end={{facts.projects_count}}
+                                    data-purecounter-duration="1" class="purecounter">{{facts.projects_count}}</span>
                                 <p><strong>Projects</strong> {{facts.projects_description}}
                                 </p>
                             </div>

@@ -12,13 +12,13 @@ from django.core.validators import (
 class Personal_info(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=30)
-    phone = models.CharField(max_length=15)
+    phone = models.CharField(max_length=40)
     email = models.EmailField(validators=[EmailValidator])
     city = models.CharField(max_length=40)
     age = models.PositiveIntegerField()
     degree = models.CharField(max_length=20)
     freelance = models.CharField(max_length=20)
-    github = models.URLField(validators=[URLValidator])
+    www = models.URLField(validators=[URLValidator])
     short_resume = models.TextField(max_length=250)
     sumary_name = models.CharField(max_length=30)
     sumary_description = models.TextField(max_length=300)
@@ -74,7 +74,7 @@ class Experience(models.Model):
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
     is_current = models.BooleanField()
-    job_discribtion = models.TextField(max_length=300, blank=True, null=True)
+    job_discription = models.TextField(max_length=1000, blank=True, null=True)
     created_on = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
@@ -136,3 +136,20 @@ class Testimonial(models.Model):
 
     def __str__(self) -> str:
         return f"{self.name}, {self.job_position}, {self.created_on}"
+
+
+class PortfolioDetails(models.Model):
+    project_name = models.CharField(max_length=20)
+    project_description = models.TextField(max_length=600)
+    project_url = models.URLField(validators=[URLValidator])
+    project_date = models.DateField(blank=True, null=True)
+    project_image1 = models.ImageField(
+        upload_to="Media", default=None, null=True, blank=True)
+    project_image2 = models.ImageField(
+        upload_to="Media", default=None, null=True, blank=True)
+    project_image3 = models.ImageField(
+        upload_to="Media", default=None, null=True, blank=True)
+    created_on = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"{self.project_name}, {self.project_url}"

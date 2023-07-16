@@ -18,6 +18,7 @@
                     <h4>{{personal_info.sumary_name}}</h4>
                     <p><em>{{personal_info.sumary_description}}</em></p>
                 </div>
+                <h3 class="resume-title">Skills</h3>
                 <div class="resume-item">
                     <h4>Hard skills</h4>
                     <p>
@@ -28,28 +29,7 @@
                     </ul>
                     </p>
                 </div>
-
-                <h3 class="resume-title">Education</h3>
-                {% for education in educations %}
                 <div class="resume-item">
-                    <h4>{{education.grade}}</h4>
-                    <h5>{{education.start_date}}-{{education.end_date}}</h5>
-                    <p><em>{{education.university_name}}</em></p>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="col-lg-6">
-                <h3 class="resume-title">Professional Experience</h3>
-                {% for experience in experiences %}
-                <div class="resume-item">
-                    <h4>{{experience.job_title}}</h4>
-                    <h5>{{experience.start_date}}-{%if experience.is_current%} present {%else%}
-                        {{experience.end_date}}{% endif %}</h5>
-                    <p><em>{{experience.company_name}}</em></p>
-                    <h6>{{experience.job_description}}</h6>
-                </div>
-                {% endfor %}
-                <div class="resume-item pb-0">
                     <h4>Soft Skills</h4>
                     <p>
                     <ul>
@@ -69,6 +49,27 @@
                     </ul>
                     </p>
                 </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="resume-title">Education</h3>
+                {% for education in educations %}
+                <div class="resume-item">
+                    <h4>{{education.grade}}</h4>
+                    <h5>{{education.start_date}}-{{education.end_date}}</h5>
+                    <p><em>{{education.university_name}}</em></p>
+                </div>
+                {% endfor %}
+                <h3 class="resume-title">Professional Experience</h3>
+                {% for experience in experiences %}
+                <div class="resume-item">
+                    <h4>{{experience.job_title}}</h4>
+                    <h5>{{experience.start_date}}-{%if experience.is_current%} present {%else%}
+                        {{experience.end_date}}{% endif %}</h5>
+                    <p><em>{{experience.company_name}}</em></p>
+                    <p line-height:1.5>{{experience.job_discription}}</p>
+                </div>
+                {% endfor %}
+
 
             </div>
         </div>
