@@ -132,6 +132,7 @@ class Testimonial(models.Model):
     opinion = models.CharField(max_length=300)
     image = models.ImageField(
         upload_to="Media", default=None, null=True, blank=True)
+    link = models.URLField(validators=[URLValidator], null=True, blank=True)
     created_on = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:

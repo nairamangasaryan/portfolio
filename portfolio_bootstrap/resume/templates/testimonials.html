@@ -14,7 +14,10 @@
                         {% if testimonial.image %}
                         <img src="{{testimonial.image.url}}" class="testimonial-img" alt="">
                         {%endif%}
-                        <h3>{{testimonial.name}}</h3>
+                        <a href="{{testimonial.link}}" target="blank"><i class="{{testimonial.name}}"></i>
+                            <h3>{{testimonial.name}}</h3>
+                        </a>
+
                         <h4>{{testimonial.job_position}}</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>

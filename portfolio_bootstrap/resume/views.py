@@ -10,7 +10,8 @@ from .models import (
     Personal_info,
     Facts,
     Service,
-    Testimonial
+    Testimonial,
+    PortfolioDetails
 )
 
 # Create your views here.
@@ -28,6 +29,7 @@ def home(request):
     facts = Facts.objects.first()
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
+    portfolio_details = PortfolioDetails.objects.first()
 
     data = {
         "skills": skills,
@@ -41,6 +43,7 @@ def home(request):
         "facts": facts,
         "services": services,
         "testimonials": testimonials,
+        "portfolio_details":portfolio_details,
 
     }
 
