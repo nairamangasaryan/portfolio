@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{%load static %}
+{% block blockcontent %}
+
+<!--header-->
+{% include "header.html"%}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="hero-container">
+    <h1>{{personal_info.first_name}} {{personal_info.last_name}} </h1>
+    <h2> {{personal_info.short_resume}}</h2>
+
+    <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+  </div>
+</section><!-- End Hero -->
+
+
+<main id="main">
+
+  <!--about-->
+  {% include "about.html"%}
+  <!--resume-->
+  {% include "resume.html"%}
+  <!--service-->
+  {% include "service.html" %}
+  <!--testimonials-->
+  {% include "testimonials.html"%}
+  <!--portfolio-->
+  {% include "portfolio.html"%}
+  <!--contact-->
+  {% include "contact.html"%}
+
+</main><!-- End #main -->
+
+<!--footer-->
+{% include "footer.html"%}
+
+{% endblock %}

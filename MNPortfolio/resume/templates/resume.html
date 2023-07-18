@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{%load static %}
+{% block blockcontent %}
+<!-- ======= My Resume Section ======= -->
+<section id="resume" class="resume">
+    <div class="container">
+
+        <div class="section-title">
+            <span>My Resume</span>
+            <h2>My Resume</h2>
+            <p>{{personal_info.short_resume}}</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="resume-title">Sumary</h3>
+                <div class="resume-item pb-0">
+                    <h4>{{personal_info.sumary_name}}</h4>
+                    <p><em>{{personal_info.sumary_description}}</em></p>
+                </div>
+                <h3 class="resume-title">Skills</h3>
+                <div class="resume-item">
+                    <h4>Hard skills</h4>
+                    <p>
+                    <ul>
+                        {% for hard_skill in hard_skills%}
+                        <li>{{hard_skill}}</li>
+                        {% endfor %}
+                    </ul>
+                    </p>
+                </div>
+                <div class="resume-item">
+                    <h4>Soft Skills</h4>
+                    <p>
+                    <ul>
+                        {% for soft_skill in soft_skills%}
+                        <li>{{soft_skill}}</li>
+                        {% endfor %}
+                    </ul>
+                    </p>
+                </div>
+                <div class="resume-item">
+                    <h4>Language skills</h4>
+                    <p>
+                    <ul>
+                        {% for language in languages%}
+                        <li>{{language.name}}-{{language.level}}</li>
+                        {% endfor %}
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="resume-title">Education</h3>
+                {% for education in educations %}
+                <div class="resume-item">
+                    <h4>{{education.grade}}</h4>
+                    <h5>{{education.start_date}}-{{education.end_date}}</h5>
+                    <p><em>{{education.university_name}}</em></p>
+                </div>
+                {% endfor %}
+                <h3 class="resume-title">Professional Experience</h3>
+                {% for experience in experiences %}
+                <div class="resume-item">
+                    <h4>{{experience.job_title}}</h4>
+                    <h5>{{experience.start_date}}-{%if experience.is_current%} present {%else%}
+                        {{experience.end_date}}{% endif %}</h5>
+                    <p><em>{{experience.company_name}}</em></p>
+                    <p line-height:1.5>{{experience.job_discription}}</p>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+    </div>
+</section><!-- End My Resume Section -->
+{%endblock%}

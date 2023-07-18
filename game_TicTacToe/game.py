@@ -46,7 +46,7 @@ class Game:
             Returns:
                 bool: True if there are three "X" or "O" in l and False otherwise
             """
-            if l.count(char) == 3:
+
             if l.count(char) == 3:
                 print(f"The '{char}' player WINS!!!")
                 return True
