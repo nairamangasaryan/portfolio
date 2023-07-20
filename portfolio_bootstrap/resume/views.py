@@ -11,9 +11,10 @@ from .models import (
     Facts,
     Service,
     Testimonial,
-    PortfolioDetails
+    PortfolioDetails,
+    UserInfo
 )
-
+from django.views.generic import DetailView
 # Create your views here.
 
 
@@ -29,7 +30,8 @@ def home(request):
     facts = Facts.objects.first()
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
-    portfolio_details = PortfolioDetails.objects.first()
+    portfolio_details = PortfolioDetails.objects.all()
+    user_info = UserInfo.objects.filter(user__username="naira")
 
     data = {
         "skills": skills,
@@ -43,8 +45,17 @@ def home(request):
         "facts": facts,
         "services": services,
         "testimonials": testimonials,
-        "portfolio_details":portfolio_details,
-
+        "portfolio_details": portfolio_details,
+        "user_info": user_info,
     }
-
     return render(request, "home.html", context=data)
+
+
+def portfolio_details(request):
+    return render(request, "portfolio_details.html")
+
+
+class PortfolioDetailView(DetailView):
+    model = PortfolioDetails
+    template_name = 'portfolio_details.html'
+    context_object_name = 'project'

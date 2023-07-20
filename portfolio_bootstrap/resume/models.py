@@ -5,11 +5,18 @@ from django.core.validators import (
     URLValidator,
     EmailValidator,
 )
-
+from django.contrib.auth import get_user_model
 # Create your models here.
+
+User = get_user_model()
+
+class UserInfo(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    
 
 
 class Personal_info(models.Model):
+
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=30)
     phone = models.CharField(max_length=40)

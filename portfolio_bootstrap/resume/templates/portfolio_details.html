@@ -3,15 +3,16 @@
 {% block blockcontent %}
 
 <main id="main">
+
   <!-- ======= Breadcrumbs Section ======= -->
   <section class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
         <h2>Portfolio Details</h2>
+
         <ol>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="{%url 'home'%}">Home</a></li>
           <li>Portfolio Details</li>
         </ol>
       </div>
@@ -25,37 +26,39 @@
 
       <div class="row gy-4">
 
-        <div class="col-lg-8">
+        <div class="col-lg-6">
           <div class="portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
-                <img src="{{portfolio_details.project_image1.url}}" alt="">
+                <img src="{{project.project_image1.url}}" alt="">
               </div>
 
               <div class="swiper-slide">
-                <img src="{{portfolio_details.project_image2.url}}" alt="">
+                <img src="{{project.project_image2.url}}" alt="">
               </div>
 
             </div>
-            <div class="swiper-pagination"></div>
+            <div class=" swiper-pagination">
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-6">
           <div class="portfolio-info">
             <h3>Project information</h3>
             <ul>
-              <li><strong>Project Name:</strong> {{portfolio_details.project_name}}</li>
-              <li><strong>Project Description:</strong> {{portfolio_details.project_description}}</li>
-              <li><strong>Project date</strong>: {{portfolio_details.project_date}}</li>
-              <li><strong>Project URL</strong>: <a href="{{portfolio_details.project_url}}" target="blank"></i></a></li>
+              <li><strong>Project Name:</strong> {{project.project_name}}</li>
+              <li><strong>Project date</strong>: {{project.project_date}}</li>
+              <li><strong>Project URL</strong>: <a href="{{project.project_url}}" target="blank">
+                  {{project.project_url}}</i></a>
+              </li>
             </ul>
           </div>
           <div class="portfolio-description">
-            <h2>This is an example of portfolio detail</h2>
+            <h2>Project Description</h2>
             <p>
-              1111----11111
+              {{project.project_description}}
             </p>
           </div>
         </div>
@@ -67,3 +70,4 @@
 
 </main><!-- End #main -->
 {%endblock%}
+{%include "footer.html"%}

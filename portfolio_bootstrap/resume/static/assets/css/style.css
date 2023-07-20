@@ -964,7 +964,8 @@ section {
 }
 
 .portfolio-details .portfolio-details-slider img {
-  width: 100%;
+  width: 500px;
+  
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -975,7 +976,7 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: #f8d4a9;
   opacity: 1;
   border: 1px solid #ffb727;
 }
