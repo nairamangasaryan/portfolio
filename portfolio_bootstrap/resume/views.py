@@ -31,7 +31,7 @@ def home(request):
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
     portfolio_details = PortfolioDetails.objects.all()
-    user_info = UserInfo.objects.filter(user__username="naira")
+    user_info = UserInfo.objects.filter(user_id = "2")
 
     data = {
         "skills": skills,

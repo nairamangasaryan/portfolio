@@ -1,0 +1,325 @@
+[
+    {
+        "model": "resume.personal_info",
+        "pk": 1,
+        "fields": {
+            "first_name": "Naira",
+            "last_name": "Mangasaryan",
+            "phone": "+374  93 49 55 44",
+            "email": "mangasaryannaira@gmail.com",
+            "city": "Yerevan, Armenia",
+            "age": 42,
+            "degree": "Master's degree",
+            "freelance": "Available",
+            "www": "https://nairamangasaryan.pythonanywhere.com",
+            "short_resume": "I'm a beginner python backend developer,  scientist,  manager of department.",
+            "sumary_name": "Python  backend developer",
+            "sumary_description": "Now, I am participating in the \"Python\" course of the AGBU \"Women Coders\" program. I managed to study the core of Python, and now are investigating the Django framework for backend development.",
+            "about": "I am outgoing, dedicated and open. I easily find a common language with people and easily adapt to changes. I believe that a person should constantly work on developing his professional skills and learn something new.",
+            "created_on": "2023-07-14T22:29:21.511Z"
+        }
+    },
+    {
+        "model": "resume.facts",
+        "pk": 1,
+        "fields": {
+            "happy_clients_count": 2,
+            "happy_clients_description": "My first two clients are my husband and my daughter.",
+            "projects_count": 2,
+            "projects_description": "My first projects are Tic-Toc game (in the base of core of PYTHON) and portfolio(in the base of Django framework).",
+            "awards_count": 1,
+            "awards_description": "I was a best student of Radiophysics faculty of YSU in 2003-2004.",
+            "years_of_exreiance": 19,
+            "years_of_exreiance_description": "More than 7 months I learn Python.\r\nI worked as a research assistant in Yerevan State University and Institute of Applied Problems of NAS RA, and since 2007 I am a scientist and manager of department in Russian-Armenian University.",
+            "created_on": "2023-07-09T21:08:58.986Z"
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 1,
+        "fields": {
+            "name": "Python",
+            "value": 60,
+            "created_on": "2023-07-09T21:08:59.004Z"
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 2,
+        "fields": {
+            "name": "HTML",
+            "value": 30,
+            "created_on": "2023-07-09T21:08:59.004Z"
+        }
+    },
+    {
+        "model": "resume.skill",
+        "pk": 3,
+        "fields": {
+            "name": "CSS",
+            "value": 30,
+            "created_on": "2023-07-09T21:08:59.004Z"
+        }
+    },
+    {
+        "model": "resume.education",
+        "pk": 1,
+        "fields": {
+            "university_name": "Yerevan State University, Faculty of Radiophysics",
+            "start_date": "2003-09-01",
+            "end_date": "2005-05-30",
+            "grade": "Master's degree",
+            "created_on": "2023-07-09T21:08:58.977Z"
+        }
+    },
+    {
+        "model": "resume.education",
+        "pk": 2,
+        "fields": {
+            "university_name": "Yerevan State University, Faculty of Radiophysics",
+            "start_date": "1999-09-01",
+            "end_date": "2003-05-30",
+            "grade": "Bachelor's degree",
+            "created_on": "2023-07-09T21:08:58.977Z"
+        }
+    },
+    {
+        "model": "resume.experience",
+        "pk": 1,
+        "fields": {
+            "job_title": "Scientist, Manager of department",
+            "company_name": "Russian-Armenian University,   Department of Materials Technology and Structure of Electronic Technique",
+            "start_date": "2007-07-30",
+            "end_date": null,
+            "is_current": true,
+            "job_discription": "Conducted scientific research and experiments. Analyzed and interpreted research data. Published research findings in scientific journals. Designed and implemented research methodologies.\r\nCollaborated with research teams and stakeholders. Maintained accurate records and documentation. Presented research findings at conferences and meetings. Took part in scientific projects.\r\n______________________________________________________________________________________\r\nProvided administrative support and coordination for the department. Performed general office tasks and assists faculty, staff and students. Managed departmental correspondence and records. Supported department events and meetings.",
+            "created_on": "2023-07-14T23:22:17.558Z"
+        }
+    },
+    {
+        "model": "resume.experience",
+        "pk": 2,
+        "fields": {
+            "job_title": "Research assistant",
+            "company_name": "Institute of Applied Problems of Physics of NAS RA",
+            "start_date": "2005-07-15",
+            "end_date": "2007-06-30",
+            "is_current": false,
+            "job_discription": "Conducted literature reviews and gathered relevant information. Carried out laboratory experiments.\r\nAssisted with data collection, analysis, and interpretation.  Managed research records and prepared reports and presentations.",
+            "created_on": "2023-07-14T13:39:42.472Z"
+        }
+    },
+    {
+        "model": "resume.language",
+        "pk": 1,
+        "fields": {
+            "name": "Armenian",
+            "level": "native",
+            "created_on": "2023-07-09T21:08:58.993Z"
+        }
+    },
+    {
+        "model": "resume.language",
+        "pk": 2,
+        "fields": {
+            "name": "Russian",
+            "level": "good",
+            "created_on": "2023-07-09T21:08:58.993Z"
+        }
+    },
+    {
+        "model": "resume.language",
+        "pk": 3,
+        "fields": {
+            "name": "English",
+            "level": "intermediate",
+            "created_on": "2023-07-09T21:08:58.993Z"
+        }
+    },
+    {
+        "model": "resume.hardskill",
+        "pk": 1,
+        "fields": {
+            "name": "Excellent problem-solving ability",
+            "created_on": "2023-07-09T21:08:58.990Z"
+        }
+    },
+    {
+        "model": "resume.hardskill",
+        "pk": 2,
+        "fields": {
+            "name": "Punctuality",
+            "created_on": "2023-07-09T21:08:58.990Z"
+        }
+    },
+    {
+        "model": "resume.hardskill",
+        "pk": 3,
+        "fields": {
+            "name": "Detail-oriented",
+            "created_on": "2023-07-09T21:08:58.990Z"
+        }
+    },
+    {
+        "model": "resume.hardskill",
+        "pk": 4,
+        "fields": {
+            "name": "Responsibility",
+            "created_on": "2023-07-09T21:08:58.990Z"
+        }
+    },
+    {
+        "model": "resume.hardskill",
+        "pk": 5,
+        "fields": {
+            "name": "Team player",
+            "created_on": "2023-07-09T21:08:58.990Z"
+        }
+    },
+    {
+        "model": "resume.hardskill",
+        "pk": 6,
+        "fields": {
+            "name": "Interact well with coworkers and management",
+            "created_on": "2023-07-09T21:08:58.990Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 1,
+        "fields": {
+            "name": "Python",
+            "created_on": "2023-07-09T21:08:59.010Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 2,
+        "fields": {
+            "name": "HTML, CSS",
+            "created_on": "2023-07-09T21:08:59.010Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 3,
+        "fields": {
+            "name": "Git/Github",
+            "created_on": "2023-07-09T21:08:59.010Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 4,
+        "fields": {
+            "name": "Linux OS",
+            "created_on": "2023-07-09T21:08:59.010Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 5,
+        "fields": {
+            "name": "MS Visual Studio",
+            "created_on": "2023-07-09T21:08:59.010Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 6,
+        "fields": {
+            "name": "Slack",
+            "created_on": "2023-07-09T21:08:59.010Z"
+        }
+    },
+    {
+        "model": "resume.softskill",
+        "pk": 7,
+        "fields": {
+            "name": "Django",
+            "created_on": "2023-07-14T23:00:40.097Z"
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 1,
+        "fields": {
+            "link": "https://www.facebook.com/naira.mangasaryan",
+            "link_name": "Facebook",
+            "link_icon": "icons8-facebook-48_C3nd6R0.png",
+            "icon_name": "bx bxl-facebook",
+            "created_on": "2023-07-12T18:38:44.196Z"
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 2,
+        "fields": {
+            "link": "http://www.linkedin.com/in/naira-mangasaryan-315b1243",
+            "link_name": "Linkdin",
+            "link_icon": "icons8-linkedin-48.png",
+            "icon_name": "bx bxl-linkedin",
+            "created_on": "2023-07-12T18:41:21.741Z"
+        }
+    },
+    {
+        "model": "resume.sociallink",
+        "pk": 3,
+        "fields": {
+            "link": "https://github.com/nairamangasaryan/portfolio",
+            "link_name": "GitHub",
+            "link_icon": "",
+            "icon_name": "bx bxl-github",
+            "created_on": "2023-07-14T23:00:08.945Z"
+        }
+    },
+    {
+        "model": "resume.service",
+        "pk": 1,
+        "fields": {
+            "service_name": "Creating a portfolio",
+            "service_description": "I can help you to have a portfolio in accordance to your imagine.",
+            "created_on": "2023-07-09T21:08:59.001Z"
+        }
+    },
+    {
+        "model": "resume.testimonial",
+        "pk": 1,
+        "fields": {
+            "name": "Suren Abrahamyan",
+            "job_position": "Back-end Developer",
+            "opinion": "Feedback",
+            "image": "Media/testimonials-1.jpg",
+            "link": "https://www.linkedin.com/in/suren-abrahamyan/",
+            "created_on": "2023-07-18T06:23:38.100Z"
+        }
+    },
+    {
+        "model": "resume.portfoliodetails",
+        "pk": 1,
+        "fields": {
+            "project_name": "Tic Tac Toe Game",
+            "project_description": "This is my first project. It is done on the base of python core. It include  functions, classes, OOP.",
+            "project_url": "https://github.com/nairamangasaryan/portfolio/tree/main/game_TicTacToe",
+            "project_date": "2023-06-03",
+            "project_image1": "Media/tic_tac_toe.jpg",
+            "project_image2": "Media/my_tic_tac_toe.jpg",
+            "project_image3": "",
+            "created_on": "2023-07-20T05:43:28.659Z"
+        }
+    },
+    {
+        "model": "resume.portfoliodetails",
+        "pk": 2,
+        "fields": {
+            "project_name": "MNportfolio",
+            "project_description": "This is my portfolio",
+            "project_url": "https://github.com/nairamangasaryan/portfolio",
+            "project_date": "2023-07-20",
+            "project_image1": "Media/nara3.jpg",
+            "project_image2": "Media/nara.jpg",
+            "project_image3": "Media/icon.jpg",
+            "created_on": "2023-07-20T05:52:01.842Z"
+        }
+    }
+]
