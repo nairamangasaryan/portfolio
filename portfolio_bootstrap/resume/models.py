@@ -161,3 +161,10 @@ class PortfolioDetails(models.Model):
 
     def __str__(self) -> str:
         return f"{self.project_name}, {self.project_url}"
+
+
+class Massage(models.Model):
+    full_name = models.CharField(max_length=50)
+    email = models.EmailField()
+    subject = models.CharField(max_length=100) 
+    massage = models.TextField(max_length=1000)  

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import (
     Skill,
     Education,
@@ -15,10 +15,23 @@ from .models import (
     UserInfo
 )
 from django.views.generic import DetailView
+from .forms import MassageForm
 # Create your views here.
 
 
 def home(request):
+
+    if request.method == "POST":
+        print("POSTED DATA")
+        form = MassageForm(request.POST)
+        if form.is_valid():
+            print("NEED TO SAVE")
+            form.save()
+            return redirect('#home')
+
+        else:
+            error = "THE SEND MASSAGE IS INCORRECT"
+
     skills = Skill.objects.all()
     educations = Education.objects.all()
     experiences = Experience.objects.all()
@@ -31,7 +44,8 @@ def home(request):
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
     portfolio_details = PortfolioDetails.objects.all()
-    user_info = UserInfo.objects.filter(user_id = "2")
+    user_info = UserInfo.objects.filter(user__username="naira")
+    massageForm = MassageForm()
 
     data = {
         "skills": skills,
@@ -47,7 +61,9 @@ def home(request):
         "testimonials": testimonials,
         "portfolio_details": portfolio_details,
         "user_info": user_info,
+        "massageForm": massageForm
     }
+
     return render(request, "home.html", context=data)
 
 

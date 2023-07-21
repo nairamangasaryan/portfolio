@@ -12,7 +12,8 @@ from .models import (
     Service,
     Testimonial,
     PortfolioDetails,
-    UserInfo
+    UserInfo,
+    Massage
 )
 
 
@@ -89,3 +90,4 @@ admin.site.register(Service, ServicekAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(PortfolioDetails, PortfolioDetailsAdmin)
 admin.site.register(UserInfo)
+admin.site.register(Massage)
