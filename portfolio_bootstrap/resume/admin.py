@@ -17,6 +17,10 @@ from .models import (
 )
 
 
+class UserInfoAdmin(admin.ModelAdmin):
+    list_display = ["username"]
+
+
 class SkillAdmin(admin.ModelAdmin):
     list_display = ["name", "value", "created_on"]
     list_filter = ["value"]
@@ -89,5 +93,5 @@ admin.site.register(SocialLink, SocialLinkAdmin)
 admin.site.register(Service, ServicekAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(PortfolioDetails, PortfolioDetailsAdmin)
-admin.site.register(UserInfo)
+admin.site.register(UserInfo)#, UserInfoAdmin)
 admin.site.register(Massage)

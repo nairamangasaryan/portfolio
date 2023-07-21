@@ -27,7 +27,7 @@ def home(request):
         if form.is_valid():
             print("NEED TO SAVE")
             form.save()
-            return redirect('#home')
+            return redirect("/")
 
         else:
             error = "THE SEND MASSAGE IS INCORRECT"
@@ -44,7 +44,7 @@ def home(request):
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
     portfolio_details = PortfolioDetails.objects.all()
-    user_info = UserInfo.objects.filter(user__username="naira")
+    user_info = UserInfo.objects.get(user__username="naira")
     massageForm = MassageForm()
 
     data = {
