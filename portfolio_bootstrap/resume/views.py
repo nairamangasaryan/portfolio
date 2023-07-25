@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import (
     Skill,
     Education,
@@ -11,26 +11,22 @@ from .models import (
     Facts,
     Service,
     Testimonial,
-    PortfolioDetails,
+    PortfolioProject,
     UserInfo
 )
 from django.views.generic import DetailView
 from .forms import MassageForm
+
 # Create your views here.
 
 
 def home(request):
 
     if request.method == "POST":
-        print("POSTED DATA")
         form = MassageForm(request.POST)
         if form.is_valid():
-            print("NEED TO SAVE")
             form.save()
-            return redirect("/")
-
-        else:
-            error = "THE SEND MASSAGE IS INCORRECT"
+            return redirect("/#contact")
 
     skills = Skill.objects.all()
     educations = Education.objects.all()
@@ -43,7 +39,7 @@ def home(request):
     facts = Facts.objects.first()
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
-    portfolio_details = PortfolioDetails.objects.all()
+    portfolio_project = PortfolioProject.objects.all()
     user_info = UserInfo.objects.get(user__username="naira")
     massageForm = MassageForm()
 
@@ -59,7 +55,7 @@ def home(request):
         "facts": facts,
         "services": services,
         "testimonials": testimonials,
-        "portfolio_details": portfolio_details,
+        "portfolio_project": portfolio_project,
         "user_info": user_info,
         "massageForm": massageForm
     }
@@ -67,11 +63,6 @@ def home(request):
     return render(request, "home.html", context=data)
 
 
-def portfolio_details(request):
-    return render(request, "portfolio_details.html")
-
-
-class PortfolioDetailView(DetailView):
-    model = PortfolioDetails
-    template_name = 'portfolio_details.html'
-    context_object_name = 'project'
+def portfolio_project(request, pk):
+    project = get_object_or_404(PortfolioProject, id=pk)
+    return render(request, "portfolio_details.html", context={"project": project})

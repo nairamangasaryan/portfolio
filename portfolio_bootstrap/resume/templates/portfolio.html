@@ -18,16 +18,16 @@
         </ul>
 
         <div class="row portfolio-container">
-            {% for example in portfolio_details %}
+            {% for project in portfolio_project %}
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-img"><img src="{{example.project_image1.url}}" class="img-fluid" alt="">
+                <div class="portfolio-img"><img src="{{project.project_image1.url}}" class="img-fluid" alt="">
                 </div>
                 <div class="portfolio-info">
-                    <h4>{{example.id}}</h4>
+                    <h4>{{project.id}}</h4>
 
-                    <a href="{{example.project_image1.url}}" data-gallery="portfolioGallery"
+                    <a href="{{project.project_image1.url}}" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link"></a>
-                    <a href="{% url 'project_detail' example.id %}" class="details-link" title="More Details"><i
+                    <a href="{% url 'portfolio_details' project.id %}" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
                 </div>
             </div>

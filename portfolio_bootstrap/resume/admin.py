@@ -11,7 +11,7 @@ from .models import (
     Facts,
     Service,
     Testimonial,
-    PortfolioDetails,
+    PortfolioProject,
     UserInfo,
     Massage
 )
@@ -75,7 +75,7 @@ class TestimonialAdmin(admin.ModelAdmin):
     list_display = ["name", "job_position", "created_on"]
 
 
-class PortfolioDetailsAdmin(admin.ModelAdmin):
+class PortfolioProjectAdmin(admin.ModelAdmin):
     list_display = ["project_name", "project_url",
                     "project_date", "created_on"]
 
@@ -92,6 +92,6 @@ admin.site.register(Facts, FactsAdmin)
 admin.site.register(SocialLink, SocialLinkAdmin)
 admin.site.register(Service, ServicekAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
-admin.site.register(PortfolioDetails, PortfolioDetailsAdmin)
-admin.site.register(UserInfo)#, UserInfoAdmin)
+admin.site.register(PortfolioProject, PortfolioProjectAdmin)
+admin.site.register(UserInfo)  # , UserInfoAdmin)
 admin.site.register(Massage)

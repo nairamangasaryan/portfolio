@@ -146,7 +146,7 @@ class Testimonial(models.Model):
         return f"{self.name}, {self.job_position}, {self.created_on}"
 
 
-class PortfolioDetails(models.Model):
+class PortfolioProject(models.Model):
     project_name = models.CharField(max_length=20)
     project_description = models.TextField(max_length=600)
     project_url = models.URLField(validators=[URLValidator])

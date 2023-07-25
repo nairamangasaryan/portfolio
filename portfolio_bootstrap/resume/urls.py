@@ -16,11 +16,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import home, portfolio_details, PortfolioDetailView
+from .views import home, portfolio_project
 
 urlpatterns = [
     path("", home, name="home"),
-    path("portfolio_details/", portfolio_details, name="portfolio_details"),
-    path('portfolio_details/<int:pk>',
-         PortfolioDetailView.as_view(), name='project_detail')
+    path("portfolio_details/<int:pk>",
+         portfolio_project, name="portfolio_details"),
 ]
