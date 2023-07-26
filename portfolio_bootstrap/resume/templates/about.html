@@ -25,8 +25,8 @@
                         <div class="col-lg-6">
                             <ul>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong>
-                                    <span>{{user_info.user.first_name}}
-                                        {{user_info.user.last_name}}</span>
+                                    <span>{{personal_info.user.first_name}}
+                                        {{personal_info.user.last_name}}</span>
                                 </li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong>
                                     <span>{{personal_info.age}}</span>
@@ -45,7 +45,7 @@
                                 </li>
                                 <li><i class="bi bi-chevron-right"></i>
                                     <strong>Email:</strong><span><b><em><a
-                                                    href="mailto:{{personal_info.email}}">{{personal_info.email}}</em></b></a></span>
+                                                    href="mailto:{{personal_info.email}}">{{personal_info.user.email}}</em></b></a></span>
                                 </li>
                                 <li><i class=" bi bi-chevron-right"></i> <strong>www:</strong>
                                     <span><b><em><a href="{{personal_info.www}}">

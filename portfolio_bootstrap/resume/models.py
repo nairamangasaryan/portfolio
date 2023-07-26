@@ -10,17 +10,10 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class UserInfo(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    
-
 
 class Personal_info(models.Model):
-
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=30)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=40)
-    email = models.EmailField(validators=[EmailValidator])
     city = models.CharField(max_length=40)
     age = models.PositiveIntegerField()
     degree = models.CharField(max_length=20)
@@ -33,7 +26,7 @@ class Personal_info(models.Model):
     created_on = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
-        return f"{self.first_name} {self.last_name}, {self.phone}, {self.email}"
+        return f"{self.user.first_name} {self.user.last_name}, {self.phone}, {self.user.email}"
 
 
 class Facts(models.Model):
@@ -166,5 +159,5 @@ class PortfolioProject(models.Model):
 class Massage(models.Model):
     full_name = models.CharField(max_length=50)
     email = models.EmailField()
-    subject = models.CharField(max_length=100) 
-    massage = models.TextField(max_length=1000)  
+    subject = models.CharField(max_length=100)
+    massage = models.TextField(max_length=1000)

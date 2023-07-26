@@ -12,13 +12,8 @@ from .models import (
     Service,
     Testimonial,
     PortfolioProject,
-    UserInfo,
     Massage
 )
-
-
-class UserInfoAdmin(admin.ModelAdmin):
-    list_display = ["username"]
 
 
 class SkillAdmin(admin.ModelAdmin):
@@ -26,11 +21,11 @@ class SkillAdmin(admin.ModelAdmin):
     list_filter = ["value"]
     search_fields = ["name"]
 
-
+"""
 class Personal_infoAdmin(admin.ModelAdmin):
-    list_display = ["first_name", "last_name",
-                    "phone", "email", "city", "created_on"]
-
+    list_display = ["user.first_name", "user.last_name",
+                    "phone", "user.email", "city", "created_on"]
+"""
 
 class EducationAdmin(admin.ModelAdmin):
     list_display = ["university_name", "start_date",
@@ -82,7 +77,7 @@ class PortfolioProjectAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Skill, SkillAdmin)
-admin.site.register(Personal_info, Personal_infoAdmin)
+admin.site.register(Personal_info) #, Personal_infoAdmin)
 admin.site.register(Education, EducationAdmin)
 admin.site.register(Experience, ExperienceAdmin)
 admin.site.register(Language, LanguageAdmin)
@@ -93,5 +88,4 @@ admin.site.register(SocialLink, SocialLinkAdmin)
 admin.site.register(Service, ServicekAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(PortfolioProject, PortfolioProjectAdmin)
-admin.site.register(UserInfo)  # , UserInfoAdmin)
 admin.site.register(Massage)

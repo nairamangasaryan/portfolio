@@ -12,7 +12,6 @@ from .models import (
     Service,
     Testimonial,
     PortfolioProject,
-    UserInfo
 )
 from django.views.generic import DetailView
 from .forms import MassageForm
@@ -40,7 +39,6 @@ def home(request):
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
     portfolio_project = PortfolioProject.objects.all()
-    user_info = UserInfo.objects.get(user__username="naira")
     massageForm = MassageForm()
 
     data = {
@@ -56,7 +54,6 @@ def home(request):
         "services": services,
         "testimonials": testimonials,
         "portfolio_project": portfolio_project,
-        "user_info": user_info,
         "massageForm": massageForm
     }
 

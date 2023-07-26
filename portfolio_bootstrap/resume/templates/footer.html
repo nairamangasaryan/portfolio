@@ -4,7 +4,7 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
-        <h3>{{personal_info.first_name}} {{personal_info.last_name}}</h3>
+        <h3>{{personal_info.user.first_name}} {{personal_info.user.last_name}}</h3>
 
         <div class="social-links">
             {%for social_link in social_links%}
@@ -14,7 +14,7 @@
 
         </div>
         <div class="copyright">
-            &copy; Copyright <strong><span>{{personal_info.first_name}}</span></strong>
+            &copy; Copyright <strong><span>{{personal_info.user.first_name}}</span></strong>
         </div>
 
     </div>
