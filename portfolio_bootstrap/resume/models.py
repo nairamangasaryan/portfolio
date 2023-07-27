@@ -24,6 +24,8 @@ class Personal_info(models.Model):
     sumary_description = models.TextField(max_length=300)
     about = models.TextField(max_length=300, blank=True, null=True)
     created_on = models.DateTimeField(auto_now=True)
+    background_image = models.ImageField(
+        upload_to="Media", blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.user.first_name} {self.user.last_name}, {self.phone}, {self.user.email}"
